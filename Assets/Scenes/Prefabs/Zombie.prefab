@@ -2179,6 +2179,7 @@ MonoBehaviour:
   stopDistance: 1
   handCollider: {fileID: 2543850042800896343}
   Pov: {fileID: 2543850043145124511}
+  istriggered: 0
 --- !u!136 &2543850042803312664
 CapsuleCollider:
   m_ObjectHideFlags: 0

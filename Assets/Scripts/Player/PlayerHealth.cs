@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public Image frontHB;
     public Image backHB;
     public System.Action OnDeath;
+    private bool istriggered = false; 
     
     private float timer;
     // Start is called before the first frame update
@@ -59,14 +60,14 @@ public class PlayerHealth : MonoBehaviour
         }
         timer = 0f;
     }
-
     private void OnTriggerEnter(Collider other) {
         Debug.Log("trigger");
-        if (other.tag == "EnemyHitArm") {
+        if (other.tag == "EnemyHitArm" && other.enabled && other.transform.root.GetComponent<EnemyAI>().alreadyDamaged == false) {
             takeDmg(EnemyControler.dmg);
-            other.enabled = false;
+            other.transform.root.GetComponent<EnemyAI>().alreadyDamaged = true;
         }
     }
+
 
     public void restoreHealth(float heal){
         health+=heal;
