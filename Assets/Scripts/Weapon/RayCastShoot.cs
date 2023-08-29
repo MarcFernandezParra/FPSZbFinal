@@ -43,6 +43,7 @@ public class RayCastShoot : MonoBehaviour
                 //no hit shotLine.SetPosition(1, shotOrigen + (fpsCam.transform.forward * weaponRange));
             }
         }
+        //zoom en zombie letra? 
     }
 
     private IEnumerator ShotEffect(){

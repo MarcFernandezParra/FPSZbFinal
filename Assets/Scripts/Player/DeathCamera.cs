@@ -78,11 +78,6 @@ public class DeathCamera : MonoBehaviour
         if(showGUI){
             GUI.color = guiColor;
             GUI.DrawTexture(new Rect(0.0f, 0.0f, Screen.width, Screen.height), deathTexture);
-            /*if(typeOfScreen == 1){
-                GUI.DrawTexture(new Rect(0.0f, 0.0f, Screen.width, Screen.height), deathTexture);
-            }else{
-                GUI.DrawTexture(new Rect(0.0f, 0.0f, Screen.width, Screen.height), deathTexture);
-            }*/
             if(canReloadLevel){
                 //if(Event.current.type == EventType.KeyUp){
                 AudioListener.volume = startVolume;
