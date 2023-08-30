@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
-    public float lookSensitivity = 2f, lookSmoothDamp =.0f;
+    public float lookSensitivity = 1f, lookSmoothDamp =.0f;
 
     [HideInInspector]
     public float yRot , xRot;

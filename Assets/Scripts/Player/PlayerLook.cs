@@ -8,8 +8,8 @@ public class PlayerLook : MonoBehaviour
     private float xRotation;
     private float yRotation;
 
-    public float xSensitivity = 30f;
-    public float ySensitivity = 30f;
+    public float xSensitivity = 25f;
+    public float ySensitivity = 25f;
 
     void Start(){
         Screen.lockCursor = true;

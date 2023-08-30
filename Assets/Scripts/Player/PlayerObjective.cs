@@ -19,9 +19,5 @@ public class PlayerObjective : MonoBehaviour
         int rndIndex = random.Next(GameMng.SortedList.Count);
         objective.text = GameMng.SortedList[rndIndex].wordToLearn;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

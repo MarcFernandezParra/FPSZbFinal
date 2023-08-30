@@ -115,7 +115,6 @@ public class SettingsMenu : MonoBehaviour
         if(PlayerPrefs.GetInt("zombies", -2) ==-2){
             noOfZombies.text = "30";
         }else{
-            Debug.Log(noOfZombies);
             noOfZombies.text = PlayerPrefs.GetInt("zombies")+"";
         }
 

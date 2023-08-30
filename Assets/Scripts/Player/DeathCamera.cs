@@ -29,6 +29,8 @@ public class DeathCamera : MonoBehaviour
    }
 
    public void ShowDeathAnim(){
+    
+        Spawner.nOfZombies = 0;
         if(typeOfScreen == 1){
             player.OnDeath -= ShowDeathAnim;
         }else{

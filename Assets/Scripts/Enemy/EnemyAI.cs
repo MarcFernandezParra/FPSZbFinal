@@ -34,10 +34,6 @@ public class EnemyAI : MonoBehaviour
                 animator.Play("Vault");
                 hurdling = true;
             }
-        }else{
-            hurdling = false;
-            nvm.enabled = true;
-            nvm.SetDestination(target.position);
         }
 
 
@@ -50,9 +46,9 @@ public class EnemyAI : MonoBehaviour
                     ZombieAttack();
                 }
         }
-        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Vault")){
                 
-            nvm.enabled = true; //if not attacking, and not in range, and not close to the player, or the animation ended, move, disable hand collider and not damaged the target yet
+            nvm.enabled = true; //if not attacking or vault, and not in range, and not close to the player, or the animation ended, move, disable hand collider and not damaged the target yet
             nvm.SetDestination(target.position);
             handCollider.enabled = false;
             alreadyDamaged = false;

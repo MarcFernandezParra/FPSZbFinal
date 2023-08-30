@@ -17,7 +17,10 @@ public class EnemyControler : MonoBehaviour
     public static int deadZombies = 0;
     public static int totalZombies = 30;
     public WordClass wordClass;    
+    public TMP_Text text;
     public System.Action OnDeath;
+    public bool startWord = true;
+    public WordClass auxWord;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +36,18 @@ public class EnemyControler : MonoBehaviour
         
         var random = new System.Random();
         int rndIndex = random.Next(GameMng.SortedList.Count);
-        word = GameMng.SortedList[rndIndex].word;
+        
+        gameObject.transform.GetChild(1).GetChild(2).gameObject.GetComponent<TMP_Text>().outlineWidth = 0.2f;
+        gameObject.transform.GetChild(1).GetChild(2).gameObject.GetComponent<TMP_Text>().outlineColor = Color.black;
+        
+        if(startWord){    
+            word = GameMng.SortedList[rndIndex].word;
+            wordClass = GameMng.SortedList[rndIndex];
+        }else{
+            word = auxWord.word;
+            wordClass = auxWord;
+        }
         gameObject.transform.GetChild(1).GetChild(2).gameObject.GetComponent<TMP_Text>().text = word;
-        wordClass = GameMng.SortedList[rndIndex];
-
     }
 
     // Update is called once per frame
@@ -45,16 +56,7 @@ public class EnemyControler : MonoBehaviour
         updateZombiUI();
     }
 
-    public void SetWord(string newWord){
-        word = newWord;
-        wordClass.word = newWord;
-        foreach(WordClass wc in SaveManager.allTheWords){
-            if(wc.word == newWord){
-                wordClass.wordToLearn= wc.wordToLearn;
-                break;
-            }
-        }
-    }
+    
     public void getDmg(int dmg, PlayerObjective po){
         
         currentHealth -= dmg;
@@ -63,7 +65,6 @@ public class EnemyControler : MonoBehaviour
             
             deadZombies++;
             if(deadZombies == totalZombies){//1){
-
                 DeathCamera.typeOfScreen = 2;
                 DeathCamera.deathCamera.me.ShowDeathAnim();
                 deadZombies = 0;
@@ -87,6 +88,11 @@ public class EnemyControler : MonoBehaviour
         backSTB.color = Color.black;
         timer += Time.deltaTime;
         float percent = timer/cheapSpeed;
+
+        if(startWord==false){
+            word = auxWord.word;
+            wordClass = auxWord;
+        }
 
         backSTB.fillAmount = Mathf.Lerp(fillB, healthFraction, percent);
     }
