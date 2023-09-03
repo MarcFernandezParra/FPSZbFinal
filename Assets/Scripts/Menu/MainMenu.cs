@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 public class MainMenu : MonoBehaviour
 {
-
+    public GameObject errorMenu;
+    public GameObject mainMenu;
     private void Start() {
         SettingsMenu.LoadSavedConfig();
     }
@@ -17,7 +18,8 @@ public class MainMenu : MonoBehaviour
 
 
         if(count<5){
-            Debug.Log("No words to play, add at least 5 words to start learning");
+            mainMenu.SetActive(false);
+            errorMenu.SetActive(true);
         }else{
 
             GameMng.SortedList = SaveManager.allTheWords.OrderByDescending(o=>o.level).ToList();

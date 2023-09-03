@@ -37,7 +37,7 @@ public class EnemyControler : MonoBehaviour
         var random = new System.Random();
         int rndIndex = random.Next(GameMng.SortedList.Count);
         
-        gameObject.transform.GetChild(1).GetChild(2).gameObject.GetComponent<TMP_Text>().outlineWidth = 0.2f;
+        gameObject.transform.GetChild(1).GetChild(2).gameObject.GetComponent<TMP_Text>().outlineWidth = 0.4f;
         gameObject.transform.GetChild(1).GetChild(2).gameObject.GetComponent<TMP_Text>().outlineColor = Color.black;
         
         if(startWord){    

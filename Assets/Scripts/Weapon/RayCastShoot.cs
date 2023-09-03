@@ -13,6 +13,7 @@ public class RayCastShoot : MonoBehaviour
     public Camera fpsCam;
     private WaitForSeconds shotDurations = new WaitForSeconds(0.07f);
     private AudioSource gunAudio;
+    public PlayerHealth player;
     public ParticleSystem muzzleFlash;
     public PlayerObjective po;
     private float nextFire; 
@@ -37,6 +38,8 @@ public class RayCastShoot : MonoBehaviour
                 EnemyControler enemy = hit.collider.GetComponent<EnemyControler>();
                 if(enemy != null && po.objective.text.Equals(enemy.wordClass.wordToLearn)){
                     enemy.getDmg(gunDmg, po);
+                }else if (enemy != null){
+                    player.takeDmg(10f);
                 }
 
             }else{
