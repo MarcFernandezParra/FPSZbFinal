@@ -1,5 +1,8 @@
 # Readme
 
+### Para descargar el juego
+https://drive.google.com/u/0/uc?id=1Ll8j1vB1soW9pzr37uUYNkB5MvHAnCIr&export=download
+
 ### Assets necesarios para uso del proyecto, en Unity
 * https://assetstore.unity.com/packages/3d/props/horror-assets-69717
 * https://assetstore.unity.com/packages/3d/environments/pbr-hospital-horror-pack-free-80117
