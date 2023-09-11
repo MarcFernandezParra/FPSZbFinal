@@ -83,7 +83,7 @@ public class DeathCamera : MonoBehaviour
             if(canReloadLevel){
                 //if(Event.current.type == EventType.KeyUp){
                 AudioListener.volume = startVolume;
-
+                EnemyControler.deadZombies = 0;
                 if(typeOfScreen == 1){
                     //death
                     SceneManager.LoadScene("LoseScene");

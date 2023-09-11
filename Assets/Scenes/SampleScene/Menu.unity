@@ -5046,7 +5046,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Number of \nZombies"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fb8946cbea42b594caa3330c71aab72d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 587b7dd46dd0d7f4baa9143ce62bb8b5, type: 2}
   m_sharedMaterial: {fileID: 5816879589447472997, guid: fb8946cbea42b594caa3330c71aab72d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5110,7 +5110,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 7.9539185, z: -189.45457, w: 12.92514}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1391823907
