@@ -26,4 +26,5 @@ Por el tamaño del asset de la font, es necesario instalar las fuentes cada vez 
 * Añadimos la fuente el input text y en el placeholder del texto, en la learning list, que podemos ver en la siguiente imagen
 ![image](https://github.com/MarcFernandezParra/FPSZbFinal/assets/90846967/d5957c30-c8f5-44f3-8afc-c624bf61e966)
 ![image](https://github.com/MarcFernandezParra/FPSZbFinal/assets/90846967/0ffb66a4-7333-48ee-9226-d9f25fae5a1b)
+* También debemos añadir en el input text y placeholder del menú opciones, en el campo numero de zombies
 
