@@ -1,7 +1,7 @@
 # Readme
 
 ### Para descargar el juego
-[https://drive.google.com/file/d/1KX15297fBfCX0KczgWFbPviGiMkQHGMZ/view?usp=sharing](https://drive.google.com/file/d/1zkLEmA2Anw_If1hDodYZjdm8y9IhIA4s/view?usp=drive_link)
+https://drive.google.com/file/d/1JYl2peOD5tkkN39hSyJXKD3jzWOW9zIi/view?usp=sharing
 
 ### Assets necesarios para uso del proyecto, en Unity
 * https://assetstore.unity.com/packages/3d/props/horror-assets-69717
